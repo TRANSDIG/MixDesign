@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabel Pengujian Analisis Ayakan Pasir</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container{width: 600px; margin: auto; text-align: center;}
+
+
+        table{
+            margin: auto;
+        }
+        th, td{
+            border: 1px solid #000;
+            padding: 5px;
+        }
+        span{
+            font-weight: bold;
+            margin-left: 170px;
+        }
+        button{
+            margin-left: 200px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>AYAKAN PASIR</h1>
+        <h2>PASIR</h2>
+        <p>Pengujian dilakukaan untuk mencari MKB dan Zone pasir guna merancang adukan mix desain</p>
+    </main>
+    
+    <table>
+        <tr>
+            <th>Lubang ayakan</th>
+            <th>Berat tertinggal</th>
+            <th>Persen tertinggal</th>
+            <th>Persen tertinggal komulatif</th>
+            <th>Persen tembus komulatif</th>
+        </tr>
+        <tr>
+            <td>9.60</td>
+            <td>
+                <input type="number" name="BeratTertinggal1" id="BeratTertinggal1" />
+            </td>
+            <td id="PersenTertinggal1"></td>
+            <td id="PersenTertinggalKomulatif1"></td>
+            <td id="PersenTembusKomulatif1"></td>
+        </tr>
+        <tr>
+            <td>4.75</td>
+            <td><input type="number" name="BeratTertinggal2" id="BeratTertinggal2" />
+            </td>
+            <td id="PersenTertinggal2"></td>
+            <td id="PersenTertinggalKomulatif2"></td>
+            <td id="PersenTembusKomulatif2"></td>
+        </tr>
+        <tr>
+            <td>2.36</td>
+            <td><input type="number" name="BeratTertinggal3" id="BeratTertinggal3" />
+            </td>
+            <td id="PersenTertinggal3"></td>
+            <td id="PersenTertinggalKomulatif3"></td>
+            <td id="PersenTembusKomulatif3"></td>
+        </tr>
+        <tr>
+            <td >1.18</td>
+            <td><input type="number" name="BeratTertinggal4" id="BeratTertinggal4" />
+            </td>
+            <td id="PersenTertinggal4"></td>
+            <td id="PersenTertinggalKomulatif4"></td>
+            <td id="PersenTembusKomulatif4"></td>
+        </tr>
+        <tr>
+            <td>0.60</td>
+            <td><input type="number" name="BeratTertinggal5" id="BeratTertinggal5" />
+            </td>
+            <td id="PersenTertinggal5"></td>
+            <td id="PersenTertinggalKomulatif5"></td>
+            <td id="PersenTembusKomulatif5"></td>
+        </tr>
+        <tr>
+            <td>0.30</td>
+            <td><input type="number" name="BeratTertinggal6" id="BeratTertinggal6" />
+            </td>
+            <td id="PersenTertinggal6"></td>
+            <td id="PersenTertinggalKomulatif6"></td>
+            <td id="PersenTembusKomulatif6"></td>
+        </tr>
+        <tr>
+            <td>0.15</td>
+            <td><input type="number" name="BeratTertinggal7" id="BeratTertinggal7" />
+            </td>
+            <td id="PersenTertinggal7"></td>
+            <td id="PersenTertinggalKomulatif7"></td>
+            <td id="PersenTembusKomulatif7"></td>
+           
+        </tr>
+        <tr>
+            <td><0.15</td>
+            <td><input type="number" name="BeratTertinggal8" id="BeratTertinggal8" />
+            </td>
+            <td id="PersenTertinggal8"></td>
+            <td id="PersenTertinggalKomulatif8"></td>
+            <td id="PersenTembusKomulatif8"></td>
+           
+        </tr>
+        <tr>
+            <td>jumlah</td>
+            <td id="TotalBeratTertinggal"></td>
+            <td id="TotalPersenTertinggal"></td>
+            <td id="TotalPersenTertinggalKomulatif"></td>
+            <td id=""></td>
+        </tr>
+
+        <tr>
+            <td>MKB</td>
+            <td id="MKB1"></td>
+        </tr>
+    </table>
+    
+    <button id="perhitungan" onclick="hitung()">HASIL</button>
+    <script>
+        let perhitungan = document.getElementById("perhitungan");
+        
+        function hitung() {
+            let BeratTertinggal1 = parseFloat(document.getElementById("BeratTertinggal1").value);
+            let BeratTertinggal2 = parseFloat(document.getElementById("BeratTertinggal2").value);
+            let BeratTertinggal3 = parseFloat(document.getElementById("BeratTertinggal3").value);
+            let BeratTertinggal4 = parseFloat(document.getElementById("BeratTertinggal4").value);
+            let BeratTertinggal5 = parseFloat(document.getElementById("BeratTertinggal5").value);
+            let BeratTertinggal6 = parseFloat(document.getElementById("BeratTertinggal6").value);
+            let BeratTertinggal7 = parseFloat(document.getElementById("BeratTertinggal7").value);
+            let BeratTertinggal8 = parseFloat(document.getElementById("BeratTertinggal8").value);
+            let jumlahBeratTertinggal = BeratTertinggal1 + BeratTertinggal2 + BeratTertinggal3 + BeratTertinggal4 + BeratTertinggal5 + BeratTertinggal6 + BeratTertinggal7 + BeratTertinggal8;
+            
+            // mendapatkan data dari input dari jumlahBeratTertinggal
+            let PersenTertinggal1 = (BeratTertinggal1 / jumlahBeratTertinggal) * 100;
+            let PersenTertinggal2 = (BeratTertinggal2 / jumlahBeratTertinggal) * 100;
+            let PersenTertinggal3 = (BeratTertinggal3 / jumlahBeratTertinggal) * 100;
+            let PersenTertinggal4 = (BeratTertinggal4 / jumlahBeratTertinggal) * 100;
+            let PersenTertinggal5 = (BeratTertinggal5 / jumlahBeratTertinggal) * 100;
+            let PersenTertinggal6 = (BeratTertinggal6 / jumlahBeratTertinggal) * 100;
+            let PersenTertinggal7 = (BeratTertinggal7 / jumlahBeratTertinggal) * 100;
+            let PersenTertinggal8 = (BeratTertinggal8 / jumlahBeratTertinggal) * 100;
+
+            let jumlahPersenTertinggal = PersenTertinggal1 + PersenTertinggal2 + PersenTertinggal3 + PersenTertinggal4 + PersenTertinggal5 + PersenTertinggal6 + PersenTertinggal7 + PersenTertinggal8;
+
+            let PersenTertinggalKomulatif1 = PersenTertinggal1;
+            let PersenTertinggalKomulatif2 = PersenTertinggalKomulatif1 + PersenTertinggal2;
+            let PersenTertinggalKomulatif3 = PersenTertinggalKomulatif2 + PersenTertinggal3;
+            let PersenTertinggalKomulatif4 = PersenTertinggalKomulatif3 + PersenTertinggal4;
+            let PersenTertinggalKomulatif5 = PersenTertinggalKomulatif4 + PersenTertinggal5;
+            let PersenTertinggalKomulatif6 = PersenTertinggalKomulatif5 + PersenTertinggal6;
+            let PersenTertinggalKomulatif7 = PersenTertinggalKomulatif6 + PersenTertinggal7;
+            let PersenTertinggalKomulatif8 = PersenTertinggalKomulatif7 + PersenTertinggal8;
+
+            let jumlahPersenTertinggalKomulatif = PersenTertinggalKomulatif1 + PersenTertinggalKomulatif2 + PersenTertinggalKomulatif3 + PersenTertinggalKomulatif4 + PersenTertinggalKomulatif5 + PersenTertinggalKomulatif6 + PersenTertinggalKomulatif7;
+
+            let PersenTembusKomulatif1 = jumlahPersenTertinggal - PersenTertinggalKomulatif1;
+            let PersenTembusKomulatif2 = jumlahPersenTertinggal - PersenTertinggalKomulatif2;
+            let PersenTembusKomulatif3 = jumlahPersenTertinggal - PersenTertinggalKomulatif3;
+            let PersenTembusKomulatif4 = jumlahPersenTertinggal - PersenTertinggalKomulatif4;
+            let PersenTembusKomulatif5 = jumlahPersenTertinggal - PersenTertinggalKomulatif5;
+            let PersenTembusKomulatif6 = jumlahPersenTertinggal - PersenTertinggalKomulatif6;
+            let PersenTembusKomulatif7 = jumlahPersenTertinggal - PersenTertinggalKomulatif7;
+
+            let MKB = jumlahPersenTertinggalKomulatif / jumlahPersenTertinggal;
+
+            document.getElementById("TotalBeratTertinggal").innerHTML = jumlahBeratTertinggal.toFixed(2);
+
+            document.getElementById("PersenTertinggal1").innerHTML = PersenTertinggal1.toFixed(2);
+            document.getElementById("PersenTertinggal2").innerHTML = PersenTertinggal2.toFixed(2);
+            document.getElementById("PersenTertinggal3").innerHTML = PersenTertinggal3.toFixed(2);
+            document.getElementById("PersenTertinggal4").innerHTML = PersenTertinggal4.toFixed(2);
+            document.getElementById("PersenTertinggal5").innerHTML = PersenTertinggal5.toFixed(2);
+            document.getElementById("PersenTertinggal6").innerHTML = PersenTertinggal6.toFixed(2);
+            document.getElementById("PersenTertinggal7").innerHTML = PersenTertinggal7.toFixed(2);
+            document.getElementById("PersenTertinggal8").innerHTML = PersenTertinggal8.toFixed(2);
+
+            document.getElementById("TotalPersenTertinggal").innerHTML = jumlahPersenTertinggal.toFixed(2);
+
+            document.getElementById("PersenTertinggalKomulatif1").innerHTML = PersenTertinggalKomulatif1.toFixed(2);
+            document.getElementById("PersenTertinggalKomulatif2").innerHTML = PersenTertinggalKomulatif2.toFixed(2);
+            document.getElementById("PersenTertinggalKomulatif3").innerHTML = PersenTertinggalKomulatif3.toFixed(2);
+            document.getElementById("PersenTertinggalKomulatif4").innerHTML = PersenTertinggalKomulatif4.toFixed(2);
+            document.getElementById("PersenTertinggalKomulatif5").innerHTML = PersenTertinggalKomulatif5.toFixed(2);
+            document.getElementById("PersenTertinggalKomulatif6").innerHTML = PersenTertinggalKomulatif6.toFixed(2);
+            document.getElementById("PersenTertinggalKomulatif7").innerHTML = PersenTertinggalKomulatif7.toFixed(2);
+
+
+            document.getElementById("TotalPersenTertinggalKomulatif").innerHTML = jumlahPersenTertinggalKomulatif.toFixed(2);
+
+            document.getElementById("PersenTembusKomulatif1").innerHTML = PersenTembusKomulatif1.toFixed(2);
+            document.getElementById("PersenTembusKomulatif2").innerHTML = PersenTembusKomulatif2.toFixed(2);
+            document.getElementById("PersenTembusKomulatif3").innerHTML = PersenTembusKomulatif3.toFixed(2);
+            document.getElementById("PersenTembusKomulatif4").innerHTML = PersenTembusKomulatif4.toFixed(2);
+            document.getElementById("PersenTembusKomulatif5").innerHTML = PersenTembusKomulatif5.toFixed(2);
+            document.getElementById("PersenTembusKomulatif6").innerHTML = PersenTembusKomulatif6.toFixed(2);
+            document.getElementById("PersenTembusKomulatif7").innerHTML = PersenTembusKomulatif7.toFixed(2);
+
+            document.getElementById("MKB1").innerHTML = MKB.toFixed(2);
+
+            
+
+        }
+        
+    </script>
+    
+</body>
+</html>

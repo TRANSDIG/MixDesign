@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="jigar sable, portfolio, jigar, full stack dev, personal portfolio lifecodes, portfolio design, portfolio website, personal portfolio" />
+    <meta name="description" content="Welcome to Jigar's Portfolio. Full-Stack Web Developer and Android App Developer" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Favicon -->
+    <!-- <link id='favicon' rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-png"> -->
+    <title>Mix Design</title>
+</head>
+<body oncontextmenu="return false">
+
+<!-- pre loader -->
+<!-- <div class="loader-container">
+  <img draggable="false" src="./assets/images/preloader.gif" alt="">
+</div> -->
+
+<!-- navbar starts -->
+<header>
+        <a href="/" class="logo"></i> Mix Design</a>
+
+        <div id="menu" class="fas fa-bars"></div>
+        <nav class="navbar">
+            <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#about">Analisis Ayakan Pasir</a></li>
+            <li><a href="#skills">Analisis Ayakan Kerikil</a></li>
+            <li><a href="#education">Penyerapan Air/Kadar Air</a></li>
+            <!-- <li><a href="#work">Work</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li> -->
+            </ul>
+        </nav>
+</header>
+<!-- navbar ends -->
+
+
+<!-- hero section starts -->
+<section class="home" id="home">
+    <div id="particles-js"></div>
+
+    <div class="content">
+    <h2>Selamat Datang, <br/> di Website <span>Mix Design</span></h2>
+    <p>Kami akan membantu perhitungan anda!</p>
+    <!-- <a href="#about" class="btn"><span>About Me</span>
+      <i class="fas fa-arrow-circle-down"></i>
+    </a> -->
+    <div class="socials">
+        <!-- <ul class="social-icons">
+          <li><a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/jigar-sable/" target="_blank"><i class="fab fa-linkedin"></i></a></li> 
+          <li><a class="github" aria-label="GitHub" href="https://github.com/jigar-sable" target="_blank"><i class="fab fa-github"></i></a></li>
+          <li><a class="twitter" aria-label="Twitter" href="https://twitter.com/jigar_sable" target="_blank"><i class="fab fa-twitter"></i></a></li>
+          <li><a class="telegram" aria-label="Telegram" href="https://t.me/lifecode5" target="_blank"><i class="fab fa-telegram-plane"></i></a></li>
+          <li><a class="instagram" aria-label="Instagram" href="https://www.instagram.com/jigarsable.dev"><i class="fab fa-instagram" target="_blank"></i></a></li>
+          <li><a class="dev" aria-label="Dev" href="https://dev.to/jigarsable" target="_blank"><i class="fab fa-dev"></i></a></li>
+        </ul> -->
+      </div>
+    </div>
+<div class="image">
+    <img draggable="false" class="tilt" src="./assets/images/hero.jpg" alt="">
+</div>
+</section>
+<!-- hero section ends -->
+
+                      <!-- Bagian Analisis Ayakan  -->
+
+<!-- about section starts -->
+<section class="about" id="about">
+    <h2 class="heading"><span>Analisis Ayakan Pasir</span></h2>
+    
+    <div class="row">
+
+    <div class="image">
+        <img draggable="false" class="tilt" src="./assets/images/profile2.jpeg" alt="">
+    </div>
+    <div class="content">
+        <h3>Mix Design
+        <span class="tag"></span>
+
+        <style>
+            .container{width: 600px; margin: auto; text-align: center;}
+    
+    
+            table{
+                margin: auto;
+            }
+            th, td{
+                border: 1px solid #000;
+                padding: 5px;
+            }
+            span{
+                font-weight: bold;
+                margin-left: 170px;
+            }
+            button{
+                margin-left: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <h1>AYAKAN PASIR</h1>
+            <h2>PASIR</h2>
+            <p>Pengujian dilakukaan untuk mencari MKB dan Zone pasir guna merancang adukan mix desain</p>
+        </main>    
+        
+        <table>
+            <tr>
+                <th>Lubang ayakan</th>
+                <th>Berat tertinggal</th>
+                <th>Persen tertinggal</th>
+                <th>Persen tertinggal komulatif</th>
+                <th>Persen tembus komulatif</th>
+            </tr>
+            <tr>
+                <td>9.60</td>
+                <td>
+                    <input type="number" name="BeratTertinggal1" id="BeratTertinggal1" />
+                </td>
+                <td id="PersenTertinggal1"></td>
+                <td id="PersenTertinggalKomulatif1"></td>
+                <td id="PersenTembusKomulatif1"></td>
+            </tr>
+            <tr>
+                <td>4.75</td>
+                <td><input type="number" name="BeratTertinggal2" id="BeratTertinggal2" />
+                </td>
+                <td id="PersenTertinggal2"></td>
+                <td id="PersenTertinggalKomulatif2"></td>
+                <td id="PersenTembusKomulatif2"></td>
+            </tr>
+            <tr>
+                <td>2.36</td>
+                <td><input type="number" name="BeratTertinggal3" id="BeratTertinggal3" />
+                </td>
+                <td id="PersenTertinggal3"></td>
+                <td id="PersenTertinggalKomulatif3"></td>
+                <td id="PersenTembusKomulatif3"></td>
+            </tr>
+            <tr>
+                <td >1.18</td>
+                <td><input type="number" name="BeratTertinggal4" id="BeratTertinggal4" />
+                </td>
+                <td id="PersenTertinggal4"></td>
+                <td id="PersenTertinggalKomulatif4"></td>
+                <td id="PersenTembusKomulatif4"></td>
+            </tr>
+            <tr>
+                <td>0.60</td>
+                <td><input type="number" name="BeratTertinggal5" id="BeratTertinggal5" />
+                </td>
+                <td id="PersenTertinggal5"></td>
+                <td id="PersenTertinggalKomulatif5"></td>
+                <td id="PersenTembusKomulatif5"></td>
+            </tr>
+            <tr>
+                <td>0.30</td>
+                <td><input type="number" name="BeratTertinggal6" id="BeratTertinggal6" />
+                </td>
+                <td id="PersenTertinggal6"></td>
+                <td id="PersenTertinggalKomulatif6"></td>
+                <td id="PersenTembusKomulatif6"></td>
+            </tr>
+            <tr>
+                <td>0.15</td>
+                <td><input type="number" name="BeratTertinggal7" id="BeratTertinggal7" />
+                </td>
+                <td id="PersenTertinggal7"></td>
+                <td id="PersenTertinggalKomulatif7"></td>
+                <td id="PersenTembusKomulatif7"></td>
+               
+            </tr>
+            <tr>
+                <td><0.15</td>
+                <td><input type="number" name="BeratTertinggal8" id="BeratTertinggal8" />
+                </td>
+                <td id="PersenTertinggal8"></td>
+                <td id="PersenTertinggalKomulatif8"></td>
+                <td id="PersenTembusKomulatif8"></td>
+               
+            </tr>
+            <tr>
+                <td>jumlah</td>
+                <td id="TotalBeratTertinggal"></td>
+                <td id="TotalPersenTertinggal"></td>
+                <td id="TotalPersenTertinggalKomulatif"></td>
+                <td id=""></td>
+            </tr>
+    
+            <tr>
+                <td>MKB</td>
+                <td id="MKB1"></td>
+            </tr>
+        </table>
+        
+        <button id="perhitungan" onclick="hitung()">HASIL</button>
+        <script>
+            let perhitungan = document.getElementById("perhitungan");
+            
+            function hitung() {
+                let BeratTertinggal1 = parseFloat(document.getElementById("BeratTertinggal1").value);
+                let BeratTertinggal2 = parseFloat(document.getElementById("BeratTertinggal2").value);
+                let BeratTertinggal3 = parseFloat(document.getElementById("BeratTertinggal3").value);
+                let BeratTertinggal4 = parseFloat(document.getElementById("BeratTertinggal4").value);
+                let BeratTertinggal5 = parseFloat(document.getElementById("BeratTertinggal5").value);
+                let BeratTertinggal6 = parseFloat(document.getElementById("BeratTertinggal6").value);
+                let BeratTertinggal7 = parseFloat(document.getElementById("BeratTertinggal7").value);
+                let BeratTertinggal8 = parseFloat(document.getElementById("BeratTertinggal8").value);
+                let jumlahBeratTertinggal = BeratTertinggal1 + BeratTertinggal2 + BeratTertinggal3 + BeratTertinggal4 + BeratTertinggal5 + BeratTertinggal6 + BeratTertinggal7 + BeratTertinggal8;
+                
+                // mendapatkan data dari input dari jumlahBeratTertinggal
+                let PersenTertinggal1 = (BeratTertinggal1 / jumlahBeratTertinggal) * 100;
+                let PersenTertinggal2 = (BeratTertinggal2 / jumlahBeratTertinggal) * 100;
+                let PersenTertinggal3 = (BeratTertinggal3 / jumlahBeratTertinggal) * 100;
+                let PersenTertinggal4 = (BeratTertinggal4 / jumlahBeratTertinggal) * 100;
+                let PersenTertinggal5 = (BeratTertinggal5 / jumlahBeratTertinggal) * 100;
+                let PersenTertinggal6 = (BeratTertinggal6 / jumlahBeratTertinggal) * 100;
+                let PersenTertinggal7 = (BeratTertinggal7 / jumlahBeratTertinggal) * 100;
+                let PersenTertinggal8 = (BeratTertinggal8 / jumlahBeratTertinggal) * 100;
+    
+                let jumlahPersenTertinggal = PersenTertinggal1 + PersenTertinggal2 + PersenTertinggal3 + PersenTertinggal4 + PersenTertinggal5 + PersenTertinggal6 + PersenTertinggal7 + PersenTertinggal8;
+    
+                let PersenTertinggalKomulatif1 = PersenTertinggal1;
+                let PersenTertinggalKomulatif2 = PersenTertinggalKomulatif1 + PersenTertinggal2;
+                let PersenTertinggalKomulatif3 = PersenTertinggalKomulatif2 + PersenTertinggal3;
+                let PersenTertinggalKomulatif4 = PersenTertinggalKomulatif3 + PersenTertinggal4;
+                let PersenTertinggalKomulatif5 = PersenTertinggalKomulatif4 + PersenTertinggal5;
+                let PersenTertinggalKomulatif6 = PersenTertinggalKomulatif5 + PersenTertinggal6;
+                let PersenTertinggalKomulatif7 = PersenTertinggalKomulatif6 + PersenTertinggal7;
+                let PersenTertinggalKomulatif8 = PersenTertinggalKomulatif7 + PersenTertinggal8;
+    
+                let jumlahPersenTertinggalKomulatif = PersenTertinggalKomulatif1 + PersenTertinggalKomulatif2 + PersenTertinggalKomulatif3 + PersenTertinggalKomulatif4 + PersenTertinggalKomulatif5 + PersenTertinggalKomulatif6 + PersenTertinggalKomulatif7;
+    
+                let PersenTembusKomulatif1 = jumlahPersenTertinggal - PersenTertinggalKomulatif1;
+                let PersenTembusKomulatif2 = jumlahPersenTertinggal - PersenTertinggalKomulatif2;
+                let PersenTembusKomulatif3 = jumlahPersenTertinggal - PersenTertinggalKomulatif3;
+                let PersenTembusKomulatif4 = jumlahPersenTertinggal - PersenTertinggalKomulatif4;
+                let PersenTembusKomulatif5 = jumlahPersenTertinggal - PersenTertinggalKomulatif5;
+                let PersenTembusKomulatif6 = jumlahPersenTertinggal - PersenTertinggalKomulatif6;
+                let PersenTembusKomulatif7 = jumlahPersenTertinggal - PersenTertinggalKomulatif7;
+    
+                let MKB = jumlahPersenTertinggalKomulatif / jumlahPersenTertinggal;
+    
+                document.getElementById("TotalBeratTertinggal").innerHTML = jumlahBeratTertinggal.toFixed(2);
+    
+                document.getElementById("PersenTertinggal1").innerHTML = PersenTertinggal1.toFixed(2);
+                document.getElementById("PersenTertinggal2").innerHTML = PersenTertinggal2.toFixed(2);
+                document.getElementById("PersenTertinggal3").innerHTML = PersenTertinggal3.toFixed(2);
+                document.getElementById("PersenTertinggal4").innerHTML = PersenTertinggal4.toFixed(2);
+                document.getElementById("PersenTertinggal5").innerHTML = PersenTertinggal5.toFixed(2);
+                document.getElementById("PersenTertinggal6").innerHTML = PersenTertinggal6.toFixed(2);
+                document.getElementById("PersenTertinggal7").innerHTML = PersenTertinggal7.toFixed(2);
+                document.getElementById("PersenTertinggal8").innerHTML = PersenTertinggal8.toFixed(2);
+    
+                document.getElementById("TotalPersenTertinggal").innerHTML = jumlahPersenTertinggal.toFixed(2);
+    
+                document.getElementById("PersenTertinggalKomulatif1").innerHTML = PersenTertinggalKomulatif1.toFixed(2);
+                document.getElementById("PersenTertinggalKomulatif2").innerHTML = PersenTertinggalKomulatif2.toFixed(2);
+                document.getElementById("PersenTertinggalKomulatif3").innerHTML = PersenTertinggalKomulatif3.toFixed(2);
+                document.getElementById("PersenTertinggalKomulatif4").innerHTML = PersenTertinggalKomulatif4.toFixed(2);
+                document.getElementById("PersenTertinggalKomulatif5").innerHTML = PersenTertinggalKomulatif5.toFixed(2);
+                document.getElementById("PersenTertinggalKomulatif6").innerHTML = PersenTertinggalKomulatif6.toFixed(2);
+                document.getElementById("PersenTertinggalKomulatif7").innerHTML = PersenTertinggalKomulatif7.toFixed(2);
+    
+    
+                document.getElementById("TotalPersenTertinggalKomulatif").innerHTML = jumlahPersenTertinggalKomulatif.toFixed(2);
+    
+                document.getElementById("PersenTembusKomulatif1").innerHTML = PersenTembusKomulatif1.toFixed(2);
+                document.getElementById("PersenTembusKomulatif2").innerHTML = PersenTembusKomulatif2.toFixed(2);
+                document.getElementById("PersenTembusKomulatif3").innerHTML = PersenTembusKomulatif3.toFixed(2);
+                document.getElementById("PersenTembusKomulatif4").innerHTML = PersenTembusKomulatif4.toFixed(2);
+                document.getElementById("PersenTembusKomulatif5").innerHTML = PersenTembusKomulatif5.toFixed(2);
+                document.getElementById("PersenTembusKomulatif6").innerHTML = PersenTembusKomulatif6.toFixed(2);
+                document.getElementById("PersenTembusKomulatif7").innerHTML = PersenTembusKomulatif7.toFixed(2);
+    
+                document.getElementById("MKB1").innerHTML = MKB.toFixed(2);
+    
+                
+    
+            }
+            
+        </script>
+        
+        
+        
+
+    </div>
+    </div>
+</section>
+<!-- about section ends -->
+
+                                <!-- bagian KERIKIL -->
+<section class="skills" id="skills">
+
+    <h2 class="heading"></i><span>Analisis Ayakan Kerikil</span></h2>
+    <style>
+        .container{width: 800px; margin: auto; text-align: center;}
+        table{
+            margin: auto;
+        }
+        th, td{
+            border: 300px solid #000;
+            padding: 70px;
+        }
+        span{
+            font-weight: bold;
+            margin-left: 190px;
+        }
+        button{
+            margin-left: 400px;
+        }
+        
+    </style>
+</head>
+<body>
+    <main>
+        <h1>AYAKAN KERIKIL</h1>
+        <h2>KERIKIL</h2>
+        <p>Pengujian dilakukaan untuk mencari MKB guna merancang adukan mix desain</p>
+    </main>
+    
+    <table>
+        <tr>
+            <th>Lubang ayakan</th>
+            <th>Berat tertinggal</th>
+            <th>Persen tertinggal</th>
+            <th>Persen tertinggal komulatif</th>
+        </tr>
+        <tr>
+            <td>25</td>
+            <td>
+                <input type="number" name="BeratTertinggal1a" id="BeratTertinggal1a" />
+            </td>
+            <td id="PersenTertinggal1a"></td>
+            <td id="PersenTertinggalKomulatif1a"></td>
+        </tr>
+        <tr>
+            <td>19.0</td>
+            <td><input type="number" name="BeratTertinggal2a" id="BeratTertinggal2a" />
+            </td>
+            <td id="PersenTertinggal2a"></td>
+            <td id="PersenTertinggalKomulatif2a"></td>
+        </tr>
+        <tr>
+            <td>12.7</td>
+            <td><input type="number" name="BeratTertinggal3a" id="BeratTertinggal3a" />
+            </td>
+            <td id="PersenTertinggal3a"></td>
+            <td id="PersenTertinggalKomulatif3a"></td>
+        </tr>
+        <tr>
+            <td >9.60</td>
+            <td><input type="number" name="BeratTertinggal4a" id="BeratTertinggal4a" />
+            </td>
+            <td id="PersenTertinggal4a"></td>
+            <td id="PersenTertinggalKomulatif4a"></td>
+        </tr>
+        <tr>
+            <td>4.75</td>
+            <td><input type="number" name="BeratTertinggal5a" id="BeratTertinggal5a" />
+            </td>
+            <td id="PersenTertinggal5a"></td>
+            <td id="PersenTertinggalKomulatif5a"></td>
+        </tr>
+        <tr>
+            <td>2.36</td>
+            <td><input type="number" name="BeratTertinggal6a" id="BeratTertinggal6a" />
+            </td>
+            <td id="PersenTertinggal6a"></td>
+            <td id="PersenTertinggalKomulatif6a"></td>
+        </tr>
+        <tr>
+            <td>1.18</td>
+            <td><input type="number" name="BeratTertinggal7a" id="BeratTertinggal7a" />
+            </td>
+            <td id="PersenTertinggal7a"></td>
+            <td id="PersenTertinggalKomulatif7a"></td> 
+        </tr>
+        <tr>
+            <td>0.60</td>
+            <td><input type="number" name="BeratTertinggal8a" id="BeratTertinggal8a" />
+            </td>
+            <td id="PersenTertinggal8a"></td>
+            <td id="PersenTertinggalKomulatif8a"></td>
+        </tr>
+        <tr>
+            <td>0.30</td>
+            <td><input type="number" name="BeratTertinggal9a" id="BeratTertinggal9a" />
+            </td>
+            <td id="PersenTertinggal9a"></td>
+            <td id="PersenTertinggalKomulatif9a"></td>
+        </tr>
+        <tr>
+            <td>0.15</td>
+            <td><input type="number" name="BeratTertinggal10a" id="BeratTertinggal10a" />
+            </td>
+            <td id="PersenTertinggal10a"></td>
+            <td id="PersenTertinggalKomulatif10a"></td>
+        </tr>
+        <tr>
+            <td>sisa</td>
+            <td><input type="number" name="BeratTertinggal11a" id="BeratTertinggal11a" />
+            </td>
+            <td id="PersenTertinggal11a"></td>
+            <td id="PersenTertinggalKomulatif11a"></td>
+        </tr>
+        <tr>
+            <td>Jumlah</td>
+            <td id="TotalBeratTertinggall"></td>
+            <td id="TotalPersenTertinggall"></td>
+            <td id="TotalPersenTertinggalKomulatiff"></td>
+        </tr>
+        <tr>
+            <td>MKBmodulushalus</td>
+            <td id="MKB11"></td>
+        </tr>
+    </table>
+
+    <button id="perhitungan1" onclick="mulai()">NEXT</button>
+    <script>
+        let perhitungan1 = document.getElementById("perhitungan1");
+        
+        function mulai() {
+            let BeratTertinggal1a = parseFloat(document.getElementById("BeratTertinggal1a").value);
+            let BeratTertinggal2a = parseFloat(document.getElementById("BeratTertinggal2a").value);
+            let BeratTertinggal3a = parseFloat(document.getElementById("BeratTertinggal3a").value);
+            let BeratTertinggal4a = parseFloat(document.getElementById("BeratTertinggal4a").value);
+            let BeratTertinggal5a = parseFloat(document.getElementById("BeratTertinggal5a").value);
+            let BeratTertinggal6a = parseFloat(document.getElementById("BeratTertinggal6a").value);
+            let BeratTertinggal7a = parseFloat(document.getElementById("BeratTertinggal7a").value);
+            let BeratTertinggal8a = parseFloat(document.getElementById("BeratTertinggal8a").value);
+            let BeratTertinggal9a = parseFloat(document.getElementById("BeratTertinggal9a").value);
+            let BeratTertinggal10a = parseFloat(document.getElementById("BeratTertinggal10a").value);
+            let BeratTertinggal11a = parseFloat(document.getElementById("BeratTertinggal11a").value);
+            let JumlahBeratTertinggall = BeratTertinggal1a + BeratTertinggal2a + BeratTertinggal3a + BeratTertinggal4a + BeratTertinggal5a + BeratTertinggal6a + BeratTertinggal7a + BeratTertinggal8a + BeratTertinggal9a + BeratTertinggal10a + BeratTertinggal11a;
+            
+            // mendapatkan data dari input dari jumlahBeratTertinggal
+            let PersenTertinggal1a = (BeratTertinggal1a / JumlahBeratTertinggall) * 100;
+            let PersenTertinggal2a = (BeratTertinggal2a / JumlahBeratTertinggall) * 100;
+            let PersenTertinggal3a = (BeratTertinggal3a / JumlahBeratTertinggall) * 100;
+            let PersenTertinggal4a = (BeratTertinggal4a / JumlahBeratTertinggall) * 100;
+            let PersenTertinggal5a = (BeratTertinggal5a / JumlahBeratTertinggall) * 100;
+            let PersenTertinggal6a = (BeratTertinggal6a / JumlahBeratTertinggall) * 100;
+            let PersenTertinggal7a = (BeratTertinggal7a/ JumlahBeratTertinggall) * 100;
+            let PersenTertinggal8a = (BeratTertinggal8a / JumlahBeratTertinggall) * 100;
+            let PersenTertinggal9a = (BeratTertinggal9a / JumlahBeratTertinggall) * 100;
+            let PersenTertinggal10a = (BeratTertinggal10a / JumlahBeratTertinggall) * 100;
+            let PersenTertinggal11a = (BeratTertinggal11a / JumlahBeratTertinggall) * 100;
+
+            let JumlahPersenTertinggall = PersenTertinggal1a + PersenTertinggal2a + PersenTertinggal3a + PersenTertinggal4a + PersenTertinggal5a + PersenTertinggal6a + PersenTertinggal7a + PersenTertinggal8a + PersenTertinggal9a + PersenTertinggal10a + PersenTertinggal11a;
+
+            let PersenTertinggalKomulatif1a = PersenTertinggal1a;
+            let PersenTertinggalKomulatif2a = PersenTertinggalKomulatif1a + PersenTertinggal2a;
+            let PersenTertinggalKomulatif3a = PersenTertinggalKomulatif2a + PersenTertinggal3a;
+            let PersenTertinggalKomulatif4a = PersenTertinggalKomulatif3a + PersenTertinggal4a;
+            let PersenTertinggalKomulatif5a = PersenTertinggalKomulatif4a + PersenTertinggal5a;
+            let PersenTertinggalKomulatif6a = PersenTertinggalKomulatif5a + PersenTertinggal6a;
+            let PersenTertinggalKomulatif7a = PersenTertinggalKomulatif6a + PersenTertinggal7a;
+            let PersenTertinggalKomulatif8a = PersenTertinggalKomulatif7a + PersenTertinggal8a;
+            let PersenTertinggalKomulatif9a = PersenTertinggalKomulatif8a + PersenTertinggal9a;
+
+            let JumlahPersenTertinggalKomulatiff = PersenTertinggalKomulatif1a + PersenTertinggalKomulatif2a + PersenTertinggalKomulatif3a + PersenTertinggalKomulatif4a + PersenTertinggalKomulatif5a + PersenTertinggalKomulatif6a + PersenTertinggalKomulatif7a + PersenTertinggalKomulatif8a + PersenTertinggalKomulatif9a;
+
+            let MKBmodulushalus = JumlahPersenTertinggalKomulatiff / JumlahPersenTertinggall;
+
+            document.getElementById("TotalBeratTertinggall").innerHTML = JumlahBeratTertinggall.toFixed(2);
+
+            document.getElementById("PersenTertinggal1a").innerHTML = PersenTertinggal1a.toFixed(2);
+            document.getElementById("PersenTertinggal2a").innerHTML = PersenTertinggal2a.toFixed(2);
+            document.getElementById("PersenTertinggal3a").innerHTML = PersenTertinggal3a.toFixed(2);
+            document.getElementById("PersenTertinggal4a").innerHTML = PersenTertinggal4a.toFixed(2);
+            document.getElementById("PersenTertinggal5a").innerHTML = PersenTertinggal5a.toFixed(2);
+            document.getElementById("PersenTertinggal6a").innerHTML = PersenTertinggal6a.toFixed(2);
+            document.getElementById("PersenTertinggal7a").innerHTML = PersenTertinggal7a.toFixed(2);
+            document.getElementById("PersenTertinggal8a").innerHTML = PersenTertinggal8a.toFixed(2);
+            document.getElementById("PersenTertinggal9a").innerHTML = PersenTertinggal9a.toFixed(2);
+            document.getElementById("PersenTertinggal10a").innerHTML = PersenTertinggal10a.toFixed(2);
+            document.getElementById("PersenTertinggal11a").innerHTML = PersenTertinggal11a.toFixed(2);
+
+            document.getElementById("TotalPersenTertinggall").innerHTML = JumlahBeratTertinggall.toFixed(2);
+
+            document.getElementById("PersenTertinggalKomulatif1a").innerHTML = PersenTertinggalKomulatif1a.toFixed(2);
+            document.getElementById("PersenTertinggalKomulatif2a").innerHTML = PersenTertinggalKomulatif2a.toFixed(2);
+            document.getElementById("PersenTertinggalKomulatif3a").innerHTML = PersenTertinggalKomulatif3a.toFixed(2);
+            document.getElementById("PersenTertinggalKomulatif4a").innerHTML = PersenTertinggalKomulatif4a.toFixed(2);
+            document.getElementById("PersenTertinggalKomulatif5a").innerHTML = PersenTertinggalKomulatif5a.toFixed(2);
+            document.getElementById("PersenTertinggalKomulatif6a").innerHTML = PersenTertinggalKomulatif6a.toFixed(2);
+            document.getElementById("PersenTertinggalKomulatif7a").innerHTML = PersenTertinggalKomulatif7a.toFixed(2);
+            document.getElementById("PersenTertinggalKomulatif8a").innerHTML = PersenTertinggalKomulatif8a.toFixed(2);
+            document.getElementById("PersenTertinggalKomulatif9a").innerHTML = PersenTertinggalKomulatif9a.toFixed(2);
+
+            document.getElementById("TotalPersenTertinggalKomulatiff").innerHTML = JumlahPersenTertinggalKomulatiff.toFixed(2);
+
+            document.getElementById("MKB11").innerHTML = MKBmodulushalus.toFixed(2);
+
+
+        }  
+        
+    </script>
+
+    
+</div>
+</section>
+<!-- skills section ends -->
+
+
+                          <!-- Penyerapan -->
+<section class="education" id="education">
+
+  <h1 class="heading"></i><span>Penyerapan / Kadar Air</span></h1>
+
+ <style>
+        .container{width: 600px; margin: auto; text-align: center;}
+        table{
+            margin: auto;
+        }
+        th, td{
+            border: 1px solid #000;
+            padding: 5px;
+        }
+        span{
+            font-weight: bold;
+            margin-left: 170px;
+        }
+        button{
+            margin-left: 200px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>PENYERAPAN AIR / KADAR AIR SSD</h1>
+        <h2>PASIR DAN KERIKIL</h2>
+        <p>Pengujian dilakukaan untuk mencari kadar air di dalam pasir dan kerikil</p>
+    </main>
+    
+    <table>
+        <tr>
+            <th>Pengujian</th>
+            <th>Berat pasir/kerikil SSD (gram)</th>
+            <th>Berat pasir/kerikil kering oven (gram)</th>
+            <th>Penyerapan (gr/ml)</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>
+                <input type="number" name="BeratpasirataukerikilSSD1" id="BeratpasirataukerikilSSD1" />
+            </td>
+            <td>
+                <input type="number" name="Beratpasirataukerikilkeringoven1" id="Beratpasirataukerikilkeringoven1" />
+            </td>
+            <td id="Penyerapan1"></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>
+                <input type="number" name="BeratpasirataukerikilSSD2" id="BeratpasirataukerikilSSD2" />
+            </td>
+            <td>
+                <input type="number" name="Beratpasirataukerikilkeringoven2" id="Beratpasirataukerikilkeringoven2" />
+            </td>
+        <td id="Penyerapan2"></td>
+        <tr>
+            <td>jumlah</td>
+            <td id="TotalBeratpasirataukerikilSSD"></td>
+            <td id="TotalBeratpasirataukerikilkeringoven"></td>
+            <td id="TotalPenyerapan"></td>
+        </tr>
+    
+    </table>
+    
+    <button id="perhitungankadar" onclick="start()">OKE</button>
+    <script>
+        let perhitungankadar = document.getElementById("perhitungankadar");
+        
+        function start() {
+            let BeratpasirataukerikilSSD1 = parseFloat(document.getElementById("BeratpasirataukerikilSSD1").value);
+            let BeratpasirataukerikilSSD2 = parseFloat(document.getElementById("BeratpasirataukerikilSSD2").value);
+
+            let jumlahBeratpasirataukerikilSSD = BeratpasirataukerikilSSD1 + BeratpasirataukerikilSSD2;
+            
+
+            let Beratpasirataukerikilkeringoven1 = parseFloat(document.getElementById("Beratpasirataukerikilkeringoven1").value);
+            let Beratpasirataukerikilkeringoven2 = parseFloat(document.getElementById("Beratpasirataukerikilkeringoven1").value);
+
+            let jumlahBeratpasirataukerikilkeringoven = Beratpasirataukerikilkeringoven1 + Beratpasirataukerikilkeringoven2;
+
+            let Penyerapan1 = (BeratpasirataukerikilSSD1 - Beratpasirataukerikilkeringoven1) *100 / Beratpasirataukerikilkeringoven1;
+            let Penyerapan2 = (BeratpasirataukerikilSSD2 - Beratpasirataukerikilkeringoven2) *100 / Beratpasirataukerikilkeringoven2;
+
+            let jumlahPenyerapan = Penyerapan1 + Penyerapan2;
+
+            document.getElementById("TotalBeratpasirataukerikilSSD").innerHTML = jumlahBeratpasirataukerikilSSD.toFixed(2);
+
+            document.getElementById("BeratpasirataukerikilSSD1").innerHTML = BeratpasirataukerikilSSD1.toFixed(2);
+            document.getElementById("BeratpasirataukerikilSSD2").innerHTML = BeratpasirataukerikilSSD2.toFixed(2);
+
+            document.getElementById("TotalBeratpasirataukerikilkeringoven").innerHTML = jumlahBeratpasirataukerikilkeringoven.toFixed(2);
+
+            document.getElementById("Beratpasirataukerikilkeringoven1").innerHTML = Beratpasirataukerikilkeringoven1.toFixed(2);
+            document.getElementById("Beratpasirataukerikilkeringoven2").innerHTML = Beratpasirataukerikilkeringoven2.toFixed(2);
+
+            document.getElementById("TotalPenyerapan").innerHTML = jumlahPenyerapan.toFixed(2);
+
+            document.getElementById("BeratpasirataukerikilSSD1").innerHTML = BeratpasirataukerikilSSD1.toFixed(2);
+            document.getElementById("BeratpasirataukerikilSSD2").innerHTML = BeratpasirataukerikilSSD2.toFixed(2);
+
+            document.getElementById("Beratpasirataukerikilkeringoven1").innerHTML = Beratpasirataukerikilkeringoven1.toFixed(2);
+            document.getElementById("Beratpasirataukerikilkeringoven2").innerHTML = Beratpasirataukerikilkeringoven2.toFixed(2);
+
+            document.getElementById("Penyerapan1").innerHTML = Penyerapan1.toFixed(2);
+            document.getElementById("Penyerapan2").innerHTML = Penyerapan2.toFixed(2);
+
+        }
+        
+    </script>
+
+
+</div>
+</section>
+<!-- education section ends -->
+
+
+
+<!-- footer section starts -->
+<section class="footer">
+
+  <div class="box-container">
+<!-- 
+      <div class="box">
+          <h3>Jigar's Portfolio</h3>
+          <p>Thank you for visiting my personal portfolio website. Connect with me over socials. <br/> <br/> Keep Rising 🚀. Connect with me over live chat!</p>
+      </div> -->
+
+      <div class="box">
+          <h3>quick links</h3>
+          <a href="#home"><i class="fas fa-chevron-circle-right"></i> home</a>
+          <a href="#about"><i class="fas fa-chevron-circle-right"></i> Analisis Ayakan</a>
+          <a href="#skills"><i class="fas fa-chevron-circle-right"></i> Bobot Isi</a>
+          <a href="#education"><i class="fas fa-chevron-circle-right"></i> BJ dan Penyerapan</a>
+          
+      </div>
+
+      <div class="box">
+          <h3>Anggota Kelompok</h3>
+          <p> Amanda putri (22505241026)</p>
+          <p> Dian Wacid (22505241026)</p>
+          <p> Ahmad Fauzi (22505241026)</p>
+          
+          <!-- <div class="share">
+
+              <a href="https://www.linkedin.com/in/jigar-sable" class="fab fa-linkedin" aria-label="LinkedIn" target="_blank"></a>
+              <a href="https://github.com/jigar-sable" class="fab fa-github" aria-label="GitHub" target="_blank"></a>
+              <a href="mailto:jigarsable21@gmail.com" class="fas fa-envelope" aria-label="Mail" target="_blank"></a>
+              <a href="https://twitter.com/jigar_sable" class="fab fa-twitter" aria-label="Twitter" target="_blank"></a>
+              <a href="https://t.me/lifecode5" class="fab fa-telegram-plane" aria-label="Telegram" target="_blank"></a>
+          </div> -->
+      </div>
+  </div>
+
+  <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a> Kelompok 3</a></h1>
+
+</section>
+<!-- footer section ends -->
+
+
+<!-- scroll top btn -->
+<a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
+<!-- scroll back to top -->
+
+
+<!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
+<!-- jquery cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- typed.js cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- particle.js links -->
+<script src="./assets/js/particles.min.js"></script>
+<script src="./assets/js/app.js"></script>
+
+<!-- vanilla tilt.js links -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- scroll reveal anim -->
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+    ></script>
+
+<!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
+
+<script src="./assets/js/script.js"></script>
+
+</body>
+</html>

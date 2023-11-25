@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabel Pengujian Kadar Air Pasir dan Kerikil</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container{width: 600px; margin: auto; text-align: center;}
+        table{
+            margin: auto;
+        }
+        th, td{
+            border: 1px solid #000;
+            padding: 5px;
+        }
+        span{
+            font-weight: bold;
+            margin-left: 170px;
+        }
+        button{
+            margin-left: 200px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>PENYERAPAN AIR / KADAR AIR SSD</h1>
+        <h2>PASIR DAN KERIKIL</h2>
+        <p>Pengujian dilakukaan untuk mencari kadar air di dalam pasir dan kerikil</p>
+    </main>
+    
+    <table>
+        <tr>
+            <th>Pengujian</th>
+            <th>Berat pasir/kerikil SSD (gram)</th>
+            <th>Berat pasir/kerikil kering oven (gram)</th>
+            <th>Penyerapan (gr/ml)</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>
+                <input type="number" name="BeratpasirataukerikilSSD1" id="BeratpasirataukerikilSSD1" />
+            </td>
+            <td>
+                <input type="number" name="Beratpasirataukerikilkeringoven1" id="Beratpasirataukerikilkeringoven1" />
+            </td>
+            <td id="Penyerapan1"></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>
+                <input type="number" name="BeratpasirataukerikilSSD2" id="BeratpasirataukerikilSSD2" />
+            </td>
+            <td>
+                <input type="number" name="Beratpasirataukerikilkeringoven2" id="Beratpasirataukerikilkeringoven2" />
+            </td>
+        <td id="Penyerapan2"></td>
+        <tr>
+            <td>jumlah</td>
+            <td id="TotalBeratpasirataukerikilSSD"></td>
+            <td id="TotalBeratpasirataukerikilkeringoven"></td>
+            <td id="TotalPenyerapan"></td>
+        </tr>
+    
+    </table>
+    
+    <button id="perhitungan" onclick="hitung()">HASIL</button>
+    <script>
+        let perhitungan = document.getElementById("perhitungan");
+        
+        function hitung() {
+            let BeratpasirataukerikilSSD1 = parseFloat(document.getElementById("BeratpasirataukerikilSSD1").value);
+            let BeratpasirataukerikilSSD2 = parseFloat(document.getElementById("BeratpasirataukerikilSSD2").value);
+
+            let jumlahBeratpasirataukerikilSSD = BeratpasirataukerikilSSD1 + BeratpasirataukerikilSSD2;
+            
+
+            let Beratpasirataukerikilkeringoven1 = parseFloat(document.getElementById("Beratpasirataukerikilkeringoven1").value);
+            let Beratpasirataukerikilkeringoven2 = parseFloat(document.getElementById("Beratpasirataukerikilkeringoven1").value);
+
+            let jumlahBeratpasirataukerikilkeringoven = Beratpasirataukerikilkeringoven1 + Beratpasirataukerikilkeringoven2;
+
+            let Penyerapan1 = (BeratpasirataukerikilSSD1 - Beratpasirataukerikilkeringoven1) / Beratpasirataukerikilkeringoven1;
+            let Penyerapan2 = (BeratpasirataukerikilSSD2 - Beratpasirataukerikilkeringoven2) / Beratpasirataukerikilkeringoven2;
+
+            let jumlahPenyerapan = Penyerapan1 + Penyerapan2;
+
+            document.getElementById("TotalBeratpasirataukerikilSSD").innerHTML = jumlahBeratpasirataukerikilSSD.toFixed(2);
+
+            document.getElementById("BeratpasirataukerikilSSD1").innerHTML = BeratpasirataukerikilSSD1.toFixed(2);
+            document.getElementById("BeratpasirataukerikilSSD2").innerHTML = BeratpasirataukerikilSSD2.toFixed(2);
+
+            document.getElementById("TotalBeratpasirataukerikilkeringoven").innerHTML = jumlahBeratpasirataukerikilkeringoven.toFixed(2);
+
+            document.getElementById("Beratpasirataukerikilkeringoven1").innerHTML = Beratpasirataukerikilkeringoven1.toFixed(2);
+            document.getElementById("Beratpasirataukerikilkeringoven2").innerHTML = Beratpasirataukerikilkeringoven2.toFixed(2);
+
+            document.getElementById("TotalPenyerapan").innerHTML = jumlahPenyerapan.toFixed(2);
+
+            document.getElementById("BeratpasirataukerikilSSD1").innerHTML = BeratpasirataukerikilSSD1.toFixed(2);
+            document.getElementById("BeratpasirataukerikilSSD2").innerHTML = BeratpasirataukerikilSSD2.toFixed(2);
+
+            document.getElementById("Beratpasirataukerikilkeringoven1").innerHTML = Beratpasirataukerikilkeringoven1.toFixed(2);
+            document.getElementById("Beratpasirataukerikilkeringoven2").innerHTML = Beratpasirataukerikilkeringoven2.toFixed(2);
+
+            document.getElementById("Penyerapan1").innerHTML = Penyerapan1.toFixed(2);
+            document.getElementById("Penyerapan2").innerHTML = Penyerapan2.toFixed(2);
+
+        }
+        
+    </script>
+    
+</body>
+</html>

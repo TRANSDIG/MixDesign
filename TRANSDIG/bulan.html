@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PENGUJIAN PASIR KERIKIL</title>
+</head>
+<body>
+    <main>
+        <h1>ANALISIS AYAKAN PASIR</h1>
+        <h2>PASIR</h2>
+        <p>Pengujian dilakukan untuk menentukan zone pasir yang akan digunakan untuk kebutuhan perancangan mix desain</p>
+        <form action="#" id="konversi-form" style="display: grid; width: 0.5rem">
+        <label for="lubangAyakan">Lubang Ayakan</label>
+        <input type="text" name="Lubang Ayakan" id="Lubang Ayakan"/>
+
+
+        <label for="Berat Tertinggal">Berat Tertinggal</label>
+        <input type="text" name="Berat Teringgal" id="=Berat Tertinggal"/>
+
+        
+        <br/>
+
+        <button type="button" onclick="hitung()">perhitungan</button>
+        </form>
+
+        <h3>Hasil</h3>
+        <p>Persen Tertinggal: <span id="Persen Tertinggal"></span></p>
+        <p>Kumulatif: <span id="Kumulatif"></span></p>
+        <p>Tembus Kumulatif: <span id="Tembus Kumulatif"></span></p>
+
+        <script>
+            const hitung = () => {
+                const LubangAyakan = parseFloat(document.getElementById("Lubang Ayakan").value);
+                const BeratTertinggal = parseFloat(document.getElementById("Berat Tertinggal").value);
+                const JumlahBeratTertinggal = parseFloat(document.getElementById("Jumlah Berat Tertinggal").value);
+                const JumlahPersenTertinggal = parseFloat(document.getElementById("Jumlah Persen Tertinggal").value);
+
+                const PersenTertinggal =  "(BeratTertinggal/Jumlah)*100%";
+                const Kumulatif = 0 + BeratTertinggal;
+                const TembusKumulatif = JumlahPersenTertinggal - Kumulatif;
+                
+                document.getElementById("Persen Tertinggal").innerHTML = PersenTertinggal.toFixed(2);
+                document.getElementById("Kumulatif").innerHTML = Kumulatif.toFixed(2);
+                document.getElementById("Tembus Kumulatif").innerHTML = TembusKumulatif.toFixed(2);
+            };
+        </script>
+</body>
+</html>
